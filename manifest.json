@@ -1,0 +1,61 @@
+{
+
+  "description": "Cast HTML5 video to other Firefox instance. This is the client extension. Setup: define url of the Muffcast Server Extension, running on any device in your network on port 8128. After Setup, go to any website with HTML5 Video elements and cast it on server.",
+  "manifest_version": 2,
+  "name": "Muffcast",
+  "version": "0.1.3",
+  "homepage_url": "https://www.champonthis.de/projects/muffcast",
+  "icons": {
+    "48": "icons/muffcast-client-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "muffcast-client@champonthis.de"
+    }
+  },
+
+  "permissions": [
+    "activeTab",
+    "http://*/",
+    "https://*/",
+    "nativeMessaging",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["background/client.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "icons/muffcast-client-32.png",
+    "theme_icons": [{
+      "light": "icons/muffcast-client-32-light.png",
+      "dark": "icons/muffcast-client-32.png",
+      "size": 32
+    }],
+    "default_title": "Muffcast",
+    "default_popup": "popup/popup.html"
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["muffcast.js"]
+  }],
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+
+  "web_accessible_resources": [
+    "icons/muffcast-client-32.png",
+    "fonts/fontawesome.eot",
+    "fonts/fontawesome.otf",
+    "fonts/fontawesome.svg",
+    "fonts/fontawesome.ttf",
+    "fonts/fontawesome.woff",
+    "fonts/fontawesome.woff2"
+  ]
+
+}
