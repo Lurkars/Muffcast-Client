@@ -2,11 +2,11 @@
 An alternative to Chromecast working with every website with HTML5 Video/Audio elements by just playing HTML5 video/audio on other Firefox instance in full-screen.
 
 ## Client
-This is the client extension. Go to any website with HTML5 Video elements to play it on the **Muffcast Server** instance by clicking on a **Muffcast**-symbol next to it.
+This is the client extension. Go to any website with HTML5 Video elements to play it on the [Muffcast Server](https://github.com/Lurkars/Muffcast-Server) instance by clicking on a **Muffcast**-symbol next to it.
 
 ### Requirements
 - Firefox/Browser
-- **Muffcast Server** running in same network
+- [Muffcast Server](https://github.com/Lurkars/Muffcast-Server) running in same network
 - Internet access
 
 ### Firefox/Browser Setup
